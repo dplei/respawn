@@ -6,7 +6,14 @@
   "bin": {
     "respawn": "dist/index.js"
   },
-  "scripts": {},
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup && node ./dist/index.js",
+    "devlink": "pnpm link --global --dir .",
+    "build:scripts": "tsup --config tsup.scripts.config.ts",
+    "release": "npm run build:scripts && node scripts-dist/release.js"
+  },
   "keywords": [
     "node",
     "cli",
@@ -18,5 +25,22 @@
   ],
   "author": "Dplei <peiplna12@gmail.com>",
   "license": "MIT",
-  "packageManager": "pnpm@10.10.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dplei/respawn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dplei/respawn/issues"
+  },
+  "homepage": "https://github.com/dplei/respawn#readme",
+  "packageManager": "pnpm@10.10.0",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
 }
