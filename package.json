@@ -1,6 +1,6 @@
 {
   "name": "@dplei/respawn",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A Node.js CLI tool to keep a specified process running continuously by automatically restarting and re-executing the command on unexpected exits, ensuring high availability.",
   "main": "index.js",
   "bin": {
